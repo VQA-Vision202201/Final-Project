@@ -8,7 +8,7 @@ This is our implementation for the Visual Question Answering task. We focused on
 - First, clone this repo
 ```bash
 git clone https://github.com/VQA-Vision202201/Final-Project.git
-cd TRAR-VQA
+cd Final-Project
 ```
 
 - Create a conda virtual environment and activate it
