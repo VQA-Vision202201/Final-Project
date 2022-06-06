@@ -47,7 +47,7 @@ ln -s /media/SSD0/daruiz/Transformers-VQA/models .
 python main.py --test minival 
 ```
 
-- Run the following line to prove our demo
+- Run the following line to prove our demo. Afterwards, you will be able to visualize the power of VQA in "demo_pic.png"
 ```bash
 python main.py --test demo 
 ```
