@@ -12,3 +12,6 @@ boto3
 requests
 # User for matrix operation
 numpy
+# For visualizing
+matplotlib
+scikit-image
