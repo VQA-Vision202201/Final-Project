@@ -1,8 +1,13 @@
-# Multimodal Fusion Model for VQA
-This is our implementation for the Visual Question Answering task. We focused on feature fusion by implementing multimodal blocks and keeping an attention strategy. 
+# What am I seeing? Visual Question Answering
+This is our implementation for the Visual Question Answering task. We focused first on feature fusion by implementing multimodal blocks, but we observed that CNN and LSTM has many limitations. According to mentioned above, we suggest a Multimodal Transformer, keeping a remarkable attention strategy, for VQA.
+
+![](./VQA_Examples.png)
 
 ## Table of Contents
 0. [Installation](#Installation)
+1. [Preparing Data](#Preparing Data)
+2. [Model](#Model)
+3. [Test and Demo](#Test and Demo)
 
 ### Installation
 - First, clone this repo
@@ -26,7 +31,7 @@ conda install pytorch==1.7.1 torchvision==0.8.2 cudatoolkit=10.1 -c pytorch
 ```bash
 pip install -r requirements.txt
 ```
-
+### Preparing Data
 - Make the softlink to obtain the dataset images
 ```bash
 ln -s /media/SSD0/naparicio/Vision/pytorch-vqa/mscoco .
@@ -37,11 +42,13 @@ ln -s /media/SSD0/naparicio/Vision/pytorch-vqa/mscoco .
 ln -s /media/SSD0/daruiz/Transformers-VQA/data .
 ```
 
+### Model
 - Copy our best model
 ```bash
 ln -s /media/SSD0/daruiz/Transformers-VQA/models .
 ```
 
+### Test and Demo
 - Run the following line to test our model
 ```bash
 python main.py --test minival 
