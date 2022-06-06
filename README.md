@@ -46,7 +46,7 @@ ln -s /media/SSD0/daruiz/Transformers-VQA/data .
 ### Model
 - Copy our best model
 ```bash
-ln -s /media/SSD0/daruiz/Transformers-VQA/models .
+cp -r /media/SSD0/daruiz/Transformers-VQA/models .
 ```
 
 ### Test
@@ -60,3 +60,9 @@ python main.py --test minival
 ```bash
 python main.py --test demo 
 ```
+
+### Acknowledgements
+Both Multimodal Block Fusion and Transformers implementation were based on the links showed beyod:
+- [BLOCK: Bilinear Superdiagonal Fusion for VQA and VRD](https://github.com/Cadene/block.bootstrap.pytorch)
+- [LXMERT: Learning Cross-Modality Encoder Representations from Transformers](https://github.com/airsplay/lxmert)
+
