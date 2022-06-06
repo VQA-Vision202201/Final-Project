@@ -193,7 +193,7 @@ if __name__ == "__main__":
                                shuffle=False, drop_last=False),
                 dump=os.path.join(args.output, 'minival_predict.json')
             )
-            print(result)
+            print('Accuracy for Validation Split', round(result,3))
         elif args.test == "demo":
             a = open("data/minival.json")
             data = json.load(a)
