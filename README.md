@@ -9,6 +9,7 @@ This is our implementation for the Visual Question Answering task. We focused fi
 2. [Model](#Model)
 3. [Test](#Test)
 4. [Demo](#Demo)
+5. [Acknowledgements](#Acknowledgements)
 
 ### Installation
 - First, clone this repo
