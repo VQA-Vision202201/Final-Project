@@ -22,8 +22,32 @@ conda activate vqa
 conda install pytorch==1.7.1 torchvision==0.8.2 cudatoolkit=10.1 -c pytorch
 ```
 
-- For multimodal fusion blocks, the following package is required:
+- Install all python dependencies:
 ```bash
-pip install block.bootstrap.pytorch
+pip install -r requirements.txt
 ```
 
+- Make the softlink to obtain the dataset images
+```bash
+ln -s /media/SSD0/naparicio/Vision/pytorch-vqa/mscoco .
+```
+
+- Make the softlink to obtain the features
+```bash
+ln -s /media/SSD0/daruiz/Transformers-VQA/data .
+```
+
+- Copy our best model
+```bash
+ln -s /media/SSD0/daruiz/Transformers-VQA/models/trained .
+```
+
+- Run the following line to test our model
+```bash
+python main.py --test minival 
+```
+
+- Run the following line to prove our demo
+```bash
+python main.py --test demo 
+```
