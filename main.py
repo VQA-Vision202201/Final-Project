@@ -4,6 +4,8 @@ import collections
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset
+import matplotlib.pyplot as plt
+import skimage.io as io
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 from param import args
@@ -207,14 +209,12 @@ if __name__ == "__main__":
             print(images_ids)
             img_id=input("Write the image id you are interested in: ")
 
-            questions=[]
+            questions={}
             labels = {}
             for i in range(len(data)):
                 if img_id==data[i]["img_id"]:
-                    question = {}
-                    question[data[i]["question_id"]]=data[i]["sent"]
+                    questions[data[i]["question_id"]]=data[i]["sent"]
                     labels[data[i]["question_id"]]=data[i]["label"]
-                    questions.append(question)
             
             print(questions)
             q_id=int(input("Write the question id you are interested in: "))
@@ -224,8 +224,14 @@ if __name__ == "__main__":
             for i in range(len(predictions)):
                 if predictions[i]["question_id"]==q_id:
                     answer=predictions[i]["answer"]
+            demo_path = os.path.join('mscoco', 'val2014', img_id+'.jpg')
+            demo_image = io.imread(demo_path)
 
-            print("ans:",answer,"\nlabel:",gt)      
+            plt.figure(figsize=(8,7))
+            plt.title(questions[q_id]+'\nGround Truth: '+str(gt)+'\nPrediction: '+answer)
+            plt.imshow(demo_image)
+            plt.axis(False)
+            plt.savefig('demo_pic.png')      
             
         else:
             assert False, "No such test option for %s" % args.test
