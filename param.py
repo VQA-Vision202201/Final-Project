@@ -33,7 +33,7 @@ def get_optimizer(optim):
 def parse_args():
     parser = argparse.ArgumentParser()
     
-    parser.add_argument("--model", default='lxmert')
+    parser.add_argument("--model", default='uniter')
 
     # Data Splits
     parser.add_argument("--train", default='train,nominival')
@@ -56,7 +56,7 @@ def parse_args():
     parser.add_argument("--tqdm", action='store_const', default=True, const=True)
 
     # Model Loading
-    parser.add_argument('--load_trained', type=str, default=None,
+    parser.add_argument('--load_trained', type=str, default="models/trained/BEST",
                         help='Load the model (usually the fine-tuned model).')
     parser.add_argument('--load_pretrained', dest='load_pretrained', type=str, default=None,
                         help='Load the pre-trained LXMERT/VisualBERT/UNITER model.')
