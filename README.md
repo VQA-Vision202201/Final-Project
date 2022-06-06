@@ -39,7 +39,7 @@ ln -s /media/SSD0/daruiz/Transformers-VQA/data .
 
 - Copy our best model
 ```bash
-ln -s /media/SSD0/daruiz/Transformers-VQA/models/trained .
+ln -s /media/SSD0/daruiz/Transformers-VQA/models/trained models
 ```
 
 - Run the following line to test our model
