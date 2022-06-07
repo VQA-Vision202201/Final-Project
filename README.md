@@ -1,7 +1,14 @@
 # What am I seeing? Visual Question Answering
+
 This is our implementation for the Visual Question Answering task. We focused first on feature fusion by implementing multimodal blocks, but we observed that CNN and LSTM has many limitations. According to mentioned above, we suggest a Multimodal Transformer, keeping a remarkable attention strategy, for VQA.
 
 ![](./VQA_Examples.png)
+
+Our main contribution is based on understanding and explaining the VQA problem as well as the limitations of the methods and possible future improvements. Additionally, we implement a state-of-the-art model that shows significant improvement over classical approaches in VQA2.0 dataset. Finally, we also suggest possible ethical considerations associated to VQA approach and task.
+
+![](./baseline.png)
+![](./fusion.png)
+![](./uniter.png)
 
 ## Table of Contents
 0. [Installation](#Installation)
